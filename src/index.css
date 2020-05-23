@@ -1,0 +1,41 @@
+.ts .attached .secondary .segment {
+    padding: 5px;
+}
+#main_container {
+    padding: 10px;
+}
+
+#white_font {
+    color: #FFFFFF;
+}
+
+#colored_bar {
+    background-color: #79A8B9;
+    padding: 10px;
+    color: #FFFFFF;
+}
+
+#mynavbar {
+    margin: 10px;
+}
+
+#user {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#sprout_container {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+#shopitem {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
