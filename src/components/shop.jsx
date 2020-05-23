@@ -3,6 +3,7 @@ import ShopItem from './shopitem';
 class Shop extends Component {
     constructor(props){
         super(props);
+       
     }
     
     render(){
@@ -13,8 +14,8 @@ class Shop extends Component {
                     <h2 id="white_font">Shop</h2>
                 </div>
                 <div class="ts single line items">
-                    <ShopItem/>
-                    <ShopItem/>
+                    <ShopItem handlePurchase={this.props.handlePurchase} itemname="Fertilizer" cost={100} />
+                    <ShopItem handlePurchase={this.props.handlePurchase} itemname="Pesticide" cost={200} />
                 </div>
             </div>       
         )

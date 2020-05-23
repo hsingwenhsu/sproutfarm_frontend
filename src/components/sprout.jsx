@@ -3,26 +3,26 @@ import React, {Component} from 'react';
 class Sprout extends Component {
     constructor(props){
         super(props);
-        this.handleIncrement = this.handleIncrement.bind(this);
-        this.doHandleIncrement = this.doHandleIncrement.bind(this);
+        this.handleAddPlug = this.handleAddPlug.bind(this);
+        
         this.state = {
-            value: this.props.value,
+            id: this.props.id,
+            value: this.props.value
         };
         
     }
-    handleIncrement(product){
-        console.log(product);
-        if(this.state.value==1){
-            this.setState({value: 0})
+    handleAddPlug(){
+        if(this.state.value==0){
+            this.props.addSprout(this.state.id);
+            this.setState({value: 1});
         }
         else{
-            this.setState({value: 1})
+            this.props.plugSprout(this.state.id);
+            this.setState({value: 0})
         }
         
     };
-    doHandleIncrement() {
-        this.handleIncrement();
-    }
+    
     
     render() {
         var icon;
@@ -39,7 +39,7 @@ class Sprout extends Component {
                     <div class="content">
                         <div class="ts secondary segment">
                             <center>
-                                <button className="btn" onClick={this.doHandleIncrement} className="btn btn-secondary">
+                                <button className="btn" onClick={this.handleAddPlug} className="btn btn-secondary">
                                     <center><img height="80" width="80" src={icon}/></center>
                                 </button>
                             </center>

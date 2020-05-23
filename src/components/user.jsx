@@ -3,6 +3,11 @@ import '../index.css';
 class User extends Component {
     constructor(props){
         super(props);
+        this.state = {
+            username: this.props.username,
+            level: 1,
+            userbalance: this.props.userbalance
+        }
     }
     render(){
         var icon = './img/gold.png';
@@ -22,21 +27,21 @@ class User extends Component {
                     <div  class="item">
                         <div class="content">
                             <div class="ts header">
-                                Username: Goldy
+                                Username: {this.state.username}
                             </div>  
                         </div>
                     </div>
                     <div  class="item">
                         <div class="content">
                             <div class="ts header">
-                                Level: 1
+                                Level: {this.state.level}
                             </div>  
                         </div>
                     </div>
                     <div  class="item">
                         <div class="content">
                             <div class="ts header">
-                                Balance: 10000 $
+                                Balance: {this.props.userbalance} $
                             </div>  
                         </div>
                     </div>
